@@ -21,7 +21,7 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Home" />
-      <Slider type="" photos={allFile.nodes}></Slider>
+      <Slider type="fallAnimation" photos={allFile.nodes}></Slider>
     </Layout>
   )
 }

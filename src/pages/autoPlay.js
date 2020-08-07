@@ -7,7 +7,7 @@ import { useStaticQuery, graphql } from "gatsby"
 const IndexPage = () => {
   const { allFile } = useStaticQuery(graphql`
     {
-      allFile(filter: { relativeDirectory: { eq: "basic" } }) {
+      allFile(filter: { relativeDirectory: { eq: "cube" } }) {
         nodes {
           childImageSharp {
             fluid(quality: 90, maxWidth: 1920) {
@@ -21,7 +21,7 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Home" />
-      <Slider type="" photos={allFile.nodes}></Slider>
+      <Slider type="fallAnimation" photos={allFile.nodes} autoPlay></Slider>
     </Layout>
   )
 }

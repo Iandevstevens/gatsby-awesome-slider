@@ -1,32 +1,47 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import "./styles/header.scss"
 
-const Header = ({ siteTitle }) => (
+const Header = () => (
   <header
     style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
+      background: `#20142f`,
     }}
   >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
+    <div className="link-container">
+      <Link to="/" className="page-link" activeStyle={{ color: "gray" }}>
+        Basic
+      </Link>
+      <Link to="/cube" className="page-link" activeStyle={{ color: "gray" }}>
+        Cube
+      </Link>
+      <Link
+        to="/scaleOut"
+        className="page-link"
+        activeStyle={{ color: "gray" }}
+      >
+        Scale out
+      </Link>
+      <Link to="/fall" className="page-link" activeStyle={{ color: "gray" }}>
+        Fall
+      </Link>
+      <Link to="/foldOut" className="page-link" activeStyle={{ color: "gray" }}>
+        Fold out
+      </Link>
+      <Link to="/open" className="page-link" activeStyle={{ color: "gray" }}>
+        Open
+      </Link>
+      <Link to="/change" className="page-link" activeStyle={{ color: "gray" }}>
+        Change
+      </Link>
+      <Link
+        to="/autoPlay"
+        className="page-link"
+        activeStyle={{ color: "gray" }}
+      >
+        Auto play
+      </Link>
     </div>
   </header>
 )

@@ -1,0 +1,14 @@
+@import "./__variables.scss";
+
+.link-container {
+  margin: 0 auto;
+  padding: 0 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: $header-hight;
+  .page-link {
+    color: white;
+    text-decoration: none;
+  }
+}
